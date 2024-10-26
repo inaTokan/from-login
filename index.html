@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login | Masuk</title>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="top-header">
+                <span>Sudah punya akun?</span>
+                <header>Masuk</header>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-field">
+                    <input type="text" class="input" id="username" placeholder="Nama Pengguna" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input" id="password" placeholder="Kata Sandi" required>
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-field">
+                    <input type="button" class="submit" id="loginButton" value="Masuk">
+                </div>
+
+                <div class="bottom">
+                    <div class="left">
+                        <input type="checkbox" id="check">
+                        <label for="check">Ingat Saya</label>
+                    </div>
+                    <div class="right">
+                        <label><a href="#">Lupa kata sandi?</a></label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loginButton').addEventListener('click', function() {
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+                
+                if (username === 'Nuraina' && password === '211020') {
+                    alert('Login berhasil! Selamat datang, Nuraina.');
+                    // Di sini Anda bisa mengarahkan pengguna ke halaman lain setelah login berhasil
+                    // window.location.href = 'dashboard.html';
+                } else {
+                    alert('Username atau password salah. Silakan coba lagi.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
